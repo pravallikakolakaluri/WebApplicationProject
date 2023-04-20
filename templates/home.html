@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happfy Career Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <style>
+      #banner{
+        width:100%;
+        height:460px;
+        object-fit:cover;
+      }
+      #container{
+        width:80%;
+        margin:0 auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+    <h1 class="text-center mt-4">Happfy Career Portal</h1>
+    <img class="img-fluid mt-4 " id="banner" src="https://webapplicationproject.pravallikakolak.repl.co/static/career.jpg"  >
+    <h2 class="text-center mt-4">About Us</h2>
+    <p class="lead mt-4">After school one winter day, Jack's mother told him to go out and play in the snow.
+
+"But it's so cold outside, Mother!" Jack said.
+
+"Put on your coat and your hat and your mittens," his mother said. "You can build a snowman before your father comes home."
+
+"I'm going to need a carrot for the nose," Jack said. "And I'll need some things for the snowman's hat and face."</p>
+    <h2 class="text-center mt-4">Job Openings</h2>
+    <p class="lead mt-4">
+      {% for jobs in job %}
+      {% include 'jobitems.html' %}
+      {% endfor %}
+    </p>
+    <div class="text-center mt-4">
+    <button class="btn btn-primary btn-lg">contact us</button>
+    <p class="text-center mt-4">copyright by pravallika</p>
+    </div>
+  </body>
+</html>
